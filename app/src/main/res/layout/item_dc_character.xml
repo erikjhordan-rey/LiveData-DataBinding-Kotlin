@@ -1,0 +1,38 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+  <data>
+    <variable
+        name="dcCharacter"
+        type="io.github.erikcaffrey.livedata_databinding.model.DcCharacter"
+        />
+  </data>
+
+  <android.support.constraint.ConstraintLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      >
+
+    <ImageView
+        android:id="@+id/image_profile"
+        android:layout_width="190dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:imgUrl="@{dcCharacter.imageProfile}"
+        />
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@{dcCharacter.name}"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/image_profile"
+        />
+
+  </android.support.constraint.ConstraintLayout>
+
+</layout>
