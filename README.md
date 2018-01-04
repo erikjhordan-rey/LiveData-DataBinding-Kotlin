@@ -26,7 +26,7 @@ buildscript {
 
 ## Demo
 
-![](./art/device-2018-01-03-211827.gif)
+<img src="https://user-images.githubusercontent.com/5893477/34550143-0f06846c-f0d4-11e7-97ae-91b02f3c11e5.gif" width="220">
 
 
 Do you want to contribute?
