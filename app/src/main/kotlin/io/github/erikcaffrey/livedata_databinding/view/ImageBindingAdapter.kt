@@ -6,7 +6,7 @@ import com.bumptech.glide.Glide
 
 @BindingAdapter("imgUrl")
 fun loadImage(imageView: ImageView, url: String) {
-  Glide.with(imageView.context)
-      .load(url)
-      .into(imageView)
+    Glide.with(imageView.context)
+            .load(url)
+            .into(imageView)
 }

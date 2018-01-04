@@ -5,8 +5,8 @@ import io.github.erikcaffrey.livedata_databinding.model.DcCharacterRepository
 
 object ServiceLocator {
 
-  private val dcCharacterDataSource: DcCharacterDataSource = DcCharacterDataSource()
+    private val dcCharacterDataSource: DcCharacterDataSource = DcCharacterDataSource()
 
-  val dcCharacterRepository = DcCharacterRepository(dcCharacterDataSource)
+    val dcCharacterRepository = DcCharacterRepository(dcCharacterDataSource)
 
 }

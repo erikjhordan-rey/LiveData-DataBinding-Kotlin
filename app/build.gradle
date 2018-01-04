@@ -4,61 +4,61 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 configurations {
-  ktlint
+    ktlint
 }
 
 android {
-  compileSdkVersion 26
-  defaultConfig {
-    applicationId "io.github.erikcaffrey.livedata_databinding"
-    minSdkVersion 15
-    targetSdkVersion 26
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-  }
-
-  dataBinding {
-    enabled = true
-  }
-
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "io.github.erikcaffrey.livedata_databinding"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-  }
 
-  sourceSets {
-    main.java.srcDirs += 'src/main/kotlin'
-  }
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 
 dependencies {
 
-  ktlint 'com.github.shyiko:ktlint:0.9.0'
+    ktlint 'com.github.shyiko:ktlint:0.9.0'
 
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-  implementation 'com.android.support:appcompat-v7:26.1.0'
-  implementation 'com.android.support:recyclerview-v7:26.1.0'
-  implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-  implementation 'android.arch.lifecycle:extensions:1.0.0'
-  implementation 'com.github.bumptech.glide:glide:4.3.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'android.arch.lifecycle:extensions:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
 
-  kapt 'com.android.databinding:compiler:3.1.0-alpha06'
-  kapt 'android.arch.lifecycle:compiler:1.0.0'
+    kapt 'com.android.databinding:compiler:3.1.0-alpha06'
+    kapt 'android.arch.lifecycle:compiler:1.0.0'
 }
 
 task ktlint(type: JavaExec) {
-  main = "com.github.shyiko.ktlint.Main"
-  classpath = configurations.ktlint
-  args "src/**/*.kt"
+    main = "com.github.shyiko.ktlint.Main"
+    classpath = configurations.ktlint
+    args "src/**/*.kt"
 }
 
 check.dependsOn ktlint
 
 task ktlintFormat(type: JavaExec) {
-  main = "com.github.shyiko.ktlint.Main"
-  classpath = configurations.ktlint
-  args "-F", "src/**/*.kt"
+    main = "com.github.shyiko.ktlint.Main"
+    classpath = configurations.ktlint
+    args "-F", "src/**/*.kt"
 }

@@ -13,35 +13,35 @@ import kotlinx.android.synthetic.main.activity_dc_character.*
 
 class DcCharacterActivity : AppCompatActivity() {
 
-  private lateinit var dcCharacterBinderAdapter: DcCharacterBinderAdapter
+    private lateinit var dcCharacterBinderAdapter: DcCharacterBinderAdapter
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    val activityDcCharacterBinding: ActivityDcCharacterBinding? = DataBindingUtil.setContentView(this, R.layout.activity_dc_character)
-    initAdapter()
-    initRecycler()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val activityDcCharacterBinding: ActivityDcCharacterBinding? = DataBindingUtil.setContentView(this, R.layout.activity_dc_character)
+        initAdapter()
+        initRecycler()
 
-    val dcCharacterViewModel = ViewModelProviders.of(this).get(DcCharacterViewModel::class.java)
+        val dcCharacterViewModel = ViewModelProviders.of(this).get(DcCharacterViewModel::class.java)
 
-    dcCharacterViewModel.getDcCharacterList().observe(this, Observer {
-      dcCharacterBinderAdapter.setDcCharacterList(it!!)
-      dcCharacterBinderAdapter.notifyDataSetChanged()
-    })
+        dcCharacterViewModel.getDcCharacterList().observe(this, Observer {
+            dcCharacterBinderAdapter.setDcCharacterList(it!!)
+            dcCharacterBinderAdapter.notifyDataSetChanged()
+        })
 
-    activityDcCharacterBinding.let {
-      it!!.dcCharacterViewModel = dcCharacterViewModel
-      it.setLifecycleOwner(this)
+        activityDcCharacterBinding.let {
+            it!!.dcCharacterViewModel = dcCharacterViewModel
+            it.setLifecycleOwner(this)
+        }
     }
-  }
 
-  private fun initAdapter() {
-    dcCharacterBinderAdapter = DcCharacterBinderAdapter()
-  }
+    private fun initAdapter() {
+        dcCharacterBinderAdapter = DcCharacterBinderAdapter()
+    }
 
-  private fun initRecycler() {
-    recycler_dc_character.layoutManager = GridLayoutManager(this, 2)
-    recycler_dc_character.setHasFixedSize(true)
-    recycler_dc_character.adapter = dcCharacterBinderAdapter
-  }
+    private fun initRecycler() {
+        recycler_dc_character.layoutManager = GridLayoutManager(this, 2)
+        recycler_dc_character.setHasFixedSize(true)
+        recycler_dc_character.adapter = dcCharacterBinderAdapter
+    }
 
 }
