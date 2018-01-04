@@ -18,7 +18,7 @@ buildscript {
 ## LiveData + Data Binding
 
 
-![](./art/Screenshot_1515036002.png)
+![](./art/dc_data-live.png)
 
 
 " You can now use a LiveData object as an observable field in data binding expressions. The ViewDataBinding class now includes a new setLifecycle method that you need to use to use to observe LiveData objects "
