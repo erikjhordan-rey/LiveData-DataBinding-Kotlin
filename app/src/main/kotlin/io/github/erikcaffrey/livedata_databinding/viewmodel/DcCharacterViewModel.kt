@@ -5,17 +5,16 @@ import android.arch.lifecycle.ViewModel
 import io.github.erikcaffrey.livedata_databinding.di.ServiceLocator
 import io.github.erikcaffrey.livedata_databinding.model.DcCharacter
 
-
 class DcCharacterViewModel : ViewModel() {
 
-  private val dcCharacterRepository = ServiceLocator.dcCharacterRepository
-  private val dcCharacterListMutableLive = MutableLiveData<List<DcCharacter>>()
+    private val dcCharacterRepository = ServiceLocator.dcCharacterRepository
+    private val dcCharacterListMutableLive = MutableLiveData<List<DcCharacter>>()
 
-  init {
-    dcCharacterRepository.receiverDcCharacterList { it ->
-      dcCharacterListMutableLive.postValue(it)
+    init {
+        dcCharacterRepository.receiverDcCharacterList { it ->
+            dcCharacterListMutableLive.postValue(it)
+        }
     }
-  }
 
-  fun getDcCharacterList() = dcCharacterListMutableLive
+    fun getDcCharacterList() = dcCharacterListMutableLive
 }

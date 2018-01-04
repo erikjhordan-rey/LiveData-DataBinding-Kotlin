@@ -34,7 +34,6 @@ class DcCharacterActivity : AppCompatActivity() {
     }
   }
 
-
   private fun initAdapter() {
     dcCharacterBinderAdapter = DcCharacterBinderAdapter()
   }

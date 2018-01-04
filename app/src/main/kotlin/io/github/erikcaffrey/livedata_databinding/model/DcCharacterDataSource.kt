@@ -1,6 +1,5 @@
 package io.github.erikcaffrey.livedata_databinding.model
 
-
 class DcCharacterDataSource {
 
   val all: List<DcCharacter>

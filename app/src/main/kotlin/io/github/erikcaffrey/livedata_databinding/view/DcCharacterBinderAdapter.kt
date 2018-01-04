@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import io.github.erikcaffrey.livedata_databinding.R
 import io.github.erikcaffrey.livedata_databinding.model.DcCharacter
 
-
 class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>() {
 
   private var dcCharacterList: List<DcCharacter>
