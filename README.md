@@ -1,6 +1,11 @@
 # LiveData-DataBinding-Kotlin
 
-As you may know, in the newest version of Android Studio [Android Studio 3.1 Canary 6](https://androidstudio.googleblog.com/2017/12/android-studio-31-canary-6-is-now.html), Google introduced support for LiveData with Data Binding. This sample show you how implement it. 
+As you may know, in the newest version of Android Studio [Android Studio 3.1 Canary 6](https://androidstudio.googleblog.com/2017/12/android-studio-31-canary-6-is-now.html), Google introduced support for LiveData with Data Binding.
+
+
+## Project Goal
+
+Learn to use LiveData + Databinding 
 
 ## Setup Android Studio 3.1 Canary 6
 
@@ -31,7 +36,7 @@ buildscript {
 
 Do you want to contribute?
 --------------------------
-Feel free to report or add any useful feature, I will be glad to improve it with your help, before submitting your code please check the [codestyle](https://github.com/square/java-code-styles).
+Feel free to report or add any useful feature, I will be glad to improve it with your help,
 
 
 Code style
