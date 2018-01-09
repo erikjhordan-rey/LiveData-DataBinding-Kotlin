@@ -36,7 +36,7 @@ buildscript {
 
 Do you want to contribute?
 --------------------------
-Feel free to report or add any useful feature, I will be glad to improve it with your help,
+Feel free to report or add any useful feature, I will be glad to improve it with your help.
 
 
 Code style
