@@ -1,5 +1,8 @@
 package io.github.erikcaffrey.livedata_databinding.view
 
+import android.arch.lifecycle.LifecycleOwner
+import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.Observer
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
@@ -8,12 +11,16 @@ import android.view.ViewGroup
 import io.github.erikcaffrey.livedata_databinding.R
 import io.github.erikcaffrey.livedata_databinding.model.DcCharacter
 
-class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>() {
+class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder> {
 
-    private var dcCharacterList: List<DcCharacter>
+    private val dcCharacterListMutableLive: MutableLiveData<List<DcCharacter>>
 
-    init {
-        dcCharacterList = emptyList()
+    constructor(lifecycleOwner: LifecycleOwner, dcCharacterListMutableLive: MutableLiveData<List<DcCharacter>>) : super() {
+        this.dcCharacterListMutableLive = dcCharacterListMutableLive
+
+        this.dcCharacterListMutableLive.observe(lifecycleOwner, Observer {
+            notifyDataSetChanged()
+        })
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DcCharacterBinderHolder {
@@ -23,14 +30,11 @@ class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>()
     }
 
     override fun onBindViewHolder(holder: DcCharacterBinderHolder, position: Int) {
-        val dcCharacter = dcCharacterList[position]
-        holder.bind(dcCharacter)
+        val dcCharacter = dcCharacterListMutableLive.value?.get(position)
+        if (dcCharacter != null) {
+            holder.bind(dcCharacter)
+        }
     }
 
-    override fun getItemCount() = dcCharacterList.size
-
-    fun setDcCharacterList(dcCharacterList: List<DcCharacter>) {
-        this.dcCharacterList = dcCharacterList
-    }
-
+    override fun getItemCount() = dcCharacterListMutableLive.value!!.size
 }

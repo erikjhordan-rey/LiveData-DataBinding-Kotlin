@@ -1,6 +1,5 @@
 package io.github.erikcaffrey.livedata_databinding.view
 
-import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -17,16 +16,11 @@ class DcCharacterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val dcCharacterViewModel = ViewModelProviders.of(this).get(DcCharacterViewModel::class.java)
         val activityDcCharacterBinding: ActivityDcCharacterBinding? = DataBindingUtil.setContentView(this, R.layout.activity_dc_character)
-        initAdapter()
+        initAdapter(dcCharacterViewModel)
         initRecycler()
 
-        val dcCharacterViewModel = ViewModelProviders.of(this).get(DcCharacterViewModel::class.java)
-
-        dcCharacterViewModel.getDcCharacterList().observe(this, Observer {
-            dcCharacterBinderAdapter.setDcCharacterList(it!!)
-            dcCharacterBinderAdapter.notifyDataSetChanged()
-        })
 
         activityDcCharacterBinding.let {
             it!!.dcCharacterViewModel = dcCharacterViewModel
@@ -34,8 +28,8 @@ class DcCharacterActivity : AppCompatActivity() {
         }
     }
 
-    private fun initAdapter() {
-        dcCharacterBinderAdapter = DcCharacterBinderAdapter()
+    private fun initAdapter(dcCharacterViewModel: DcCharacterViewModel) {
+        dcCharacterBinderAdapter = DcCharacterBinderAdapter(this, dcCharacterViewModel.getDcCharacterList())
     }
 
     private fun initRecycler() {

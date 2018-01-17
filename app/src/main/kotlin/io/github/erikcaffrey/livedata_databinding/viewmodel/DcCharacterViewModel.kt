@@ -11,6 +11,8 @@ class DcCharacterViewModel : ViewModel() {
     private val dcCharacterListMutableLive = MutableLiveData<List<DcCharacter>>()
 
     init {
+        dcCharacterListMutableLive.value = emptyList()
+
         dcCharacterRepository.receiverDcCharacterList { it ->
             dcCharacterListMutableLive.postValue(it)
         }
