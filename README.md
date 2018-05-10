@@ -7,14 +7,14 @@ As you may know, in the newest version of Android Studio [Android Studio 3.1 Can
 
 Learn to use LiveData + Databinding 
 
-## Setup Android Studio 3.1 Canary 6
+## Setup Android Studio 3.2 Canary 7
 
 
 ``` 
 
 buildscript {
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0-alpha06'
+        classpath 'com.android.tools.build:gradle:3.2.0-alpha07'
     }
 }
 
