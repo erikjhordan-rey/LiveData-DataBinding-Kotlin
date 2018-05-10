@@ -34,5 +34,4 @@ class DcCharacterRepository constructor(private val dcCharacterDataSource: DcCha
             }
         }, period, period)
     }
-
 }

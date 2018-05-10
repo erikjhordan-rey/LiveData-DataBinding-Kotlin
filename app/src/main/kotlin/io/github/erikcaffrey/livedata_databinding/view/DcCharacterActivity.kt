@@ -24,13 +24,15 @@ class DcCharacterActivity : AppCompatActivity() {
         val dcCharacterViewModel = ViewModelProviders.of(this).get(DcCharacterViewModel::class.java)
 
         dcCharacterViewModel.getDcCharacterList().observe(this, Observer {
-            dcCharacterBinderAdapter.setDcCharacterList(it!!)
-            dcCharacterBinderAdapter.notifyDataSetChanged()
+            it?.run {
+                dcCharacterBinderAdapter.setDcCharacterList(it)
+                dcCharacterBinderAdapter.notifyDataSetChanged()
+            }
         })
 
-        activityDcCharacterBinding.let {
-            it!!.dcCharacterViewModel = dcCharacterViewModel
-            it.setLifecycleOwner(this)
+        activityDcCharacterBinding?.run {
+            this.dcCharacterViewModel = dcCharacterViewModel
+            setLifecycleOwner(this@DcCharacterActivity)
         }
     }
 
@@ -43,5 +45,4 @@ class DcCharacterActivity : AppCompatActivity() {
         recycler_dc_character.setHasFixedSize(true)
         recycler_dc_character.adapter = dcCharacterBinderAdapter
     }
-
 }

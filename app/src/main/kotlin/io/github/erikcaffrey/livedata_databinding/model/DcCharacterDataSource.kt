@@ -64,5 +64,4 @@ class DcCharacterDataSource {
             "Captain Cold",
             "http://www.dccomics.com/sites/default/files/styles/comics320x485/public/captaincold_192x291_53c5877b6d0b08.48501626.jpg"
     )
-
 }
