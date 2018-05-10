@@ -14,8 +14,12 @@ Learn to use LiveData + Databinding
 
 buildscript {
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0-alpha07'
+        classpath 'com.android.tools.build:gradle:3.1.2'
     }
+}
+
+dependencies {
+  kapt 'com.android.databinding:compiler:3.1.2'  
 }
 
 ```
