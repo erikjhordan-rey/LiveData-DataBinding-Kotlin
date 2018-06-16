@@ -1,35 +1,49 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="dcCharacter"
-            type="io.github.erikcaffrey.livedata_databinding.model.DcCharacter" />
+            type="io.github.erikcaffrey.livedatadatabinding.model.DcCharacter" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/image_profile"
-            android:layout_width="190dp"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            app:imgUrl="@{dcCharacter.imageProfile}" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="H,2:3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:imgUrl="@{dcCharacter.imageProfileUrl}"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+        </android.support.constraint.ConstraintLayout>
 
         <TextView
-            android:layout_width="190dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:background="@color/colorAccent"
             android:gravity="center"
+            android:lines="2"
             android:padding="8dp"
             android:text="@{dcCharacter.name}"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/image_profile" />
-
-    </android.support.constraint.ConstraintLayout>
-
+            android:textSize="16sp" />
+    </FrameLayout>
 </layout>

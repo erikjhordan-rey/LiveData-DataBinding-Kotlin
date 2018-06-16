@@ -6,14 +6,13 @@
 
         <variable
             name="dcCharacterViewModel"
-            type="io.github.erikcaffrey.livedata_databinding.viewmodel.DcCharacterViewModel" />
+            type="io.github.erikcaffrey.livedatadatabinding.viewmodel.DcCharacterViewModel" />
     </data>
-
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="io.github.erikcaffrey.livedata_databinding.view.DcCharacterActivity">
+        tools:context="io.github.erikcaffrey.livedatadatabinding.view.DcCharacterActivity">
 
         <TextView
             android:id="@+id/text_character_size"
@@ -22,7 +21,7 @@
             android:background="@color/colorPrimary"
             android:gravity="start|center"
             android:padding="8dp"
-            android:text="@{` DC Characters: ` + Integer.toString(dcCharacterViewModel.dcCharacterList.size)}"
+            android:text="@{` DC Characters: ` + dcCharacterViewModel.dcCharacterList.size}"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -37,7 +36,5 @@
             android:scrollbars="vertical"
             app:layout_constraintTop_toBottomOf="@+id/text_character_size"
             tools:listitem="@layout/item_dc_character" />
-
     </android.support.constraint.ConstraintLayout>
-
 </layout>
