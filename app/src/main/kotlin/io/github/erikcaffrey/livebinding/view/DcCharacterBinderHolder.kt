@@ -1,9 +1,10 @@
-package io.github.erikcaffrey.livedata_databinding.view
+package io.github.erikcaffrey.livebinding.view
 
-import android.databinding.ViewDataBinding
-import android.support.v7.widget.RecyclerView
+
+import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.RecyclerView
 import io.github.erikcaffrey.livedata_databinding.BR
-import io.github.erikcaffrey.livedata_databinding.model.DcCharacter
+import io.github.erikcaffrey.livebinding.model.DcCharacter
 
 class DcCharacterBinderHolder constructor(private val viewDataBinding: ViewDataBinding) : RecyclerView.ViewHolder(viewDataBinding.root) {
 
@@ -11,5 +12,4 @@ class DcCharacterBinderHolder constructor(private val viewDataBinding: ViewDataB
         viewDataBinding.setVariable(BR.dcCharacter, dcCharacter)
         viewDataBinding.executePendingBindings()
     }
-
 }

@@ -1,12 +1,12 @@
-package io.github.erikcaffrey.livedata_databinding.view
+package io.github.erikcaffrey.livebinding.view
 
-import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import androidx.recyclerview.widget.RecyclerView
+import io.github.erikcaffrey.livebinding.model.DcCharacter
 import io.github.erikcaffrey.livedata_databinding.R
-import io.github.erikcaffrey.livedata_databinding.model.DcCharacter
 
 class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>() {
 

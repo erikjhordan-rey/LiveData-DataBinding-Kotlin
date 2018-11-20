@@ -5,10 +5,10 @@
 
         <variable
             name="dcCharacter"
-            type="io.github.erikcaffrey.livedata_databinding.model.DcCharacter" />
+            type="io.github.erikcaffrey.livebinding.model.DcCharacter" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -17,7 +17,7 @@
             android:layout_width="190dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            app:imgUrl="@{dcCharacter.imageProfile}" />
+            app:imageUrl="@{dcCharacter.imageProfile}" />
 
         <TextView
             android:layout_width="190dp"
@@ -30,6 +30,6 @@
             android:textSize="16sp"
             app:layout_constraintTop_toBottomOf="@id/image_profile" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
