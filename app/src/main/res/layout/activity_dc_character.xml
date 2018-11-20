@@ -6,14 +6,13 @@
 
         <variable
             name="dcCharacterViewModel"
-            type="io.github.erikcaffrey.livedata_databinding.viewmodel.DcCharacterViewModel" />
+            type="io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModel" />
     </data>
 
-
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="io.github.erikcaffrey.livedata_databinding.view.DcCharacterActivity">
+        tools:context="io.github.erikcaffrey.livebinding.view.DcCharacterActivity">
 
         <TextView
             android:id="@+id/text_character_size"
@@ -29,7 +28,7 @@
             app:layout_constraintBottom_toTopOf="@id/recycler_dc_character"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_dc_character"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,6 +37,6 @@
             app:layout_constraintTop_toBottomOf="@+id/text_character_size"
             tools:listitem="@layout/item_dc_character" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

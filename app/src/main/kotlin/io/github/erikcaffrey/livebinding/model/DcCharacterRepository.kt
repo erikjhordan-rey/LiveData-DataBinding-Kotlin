@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.livedata_databinding.model
+package io.github.erikcaffrey.livebinding.model
 
 import java.util.Timer
 import java.util.Random

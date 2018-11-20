@@ -1,22 +1,19 @@
-package io.github.erikcaffrey.livedata_databinding.view
+package io.github.erikcaffrey.livebinding.view
 
-import android.databinding.DataBindingUtil
-import android.databinding.ViewDataBinding
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.RecyclerView
+import io.github.erikcaffrey.livebinding.model.DcCharacter
 import io.github.erikcaffrey.livedata_databinding.R
-import io.github.erikcaffrey.livedata_databinding.model.DcCharacter
 
 class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>() {
 
     private var dcCharacterList: List<DcCharacter> = emptyList()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DcCharacterBinderHolder {
-        val viewDataBinding: ViewDataBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context),
-                R.layout.item_dc_character, parent, false)
-        return DcCharacterBinderHolder(viewDataBinding)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DcCharacterBinderHolder =
+            DcCharacterBinderHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context),
+                    R.layout.item_dc_character, parent, false))
 
     override fun onBindViewHolder(holder: DcCharacterBinderHolder, position: Int) {
         val dcCharacter = dcCharacterList[position]
