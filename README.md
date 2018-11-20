@@ -1,7 +1,6 @@
 # LiveData-DataBinding-Kotlin
 
-As you may know, in the newest version of Android Studio [Android Studio 3.1 Canary 6](https://androidstudio.googleblog.com/2017/12/android-studio-31-canary-6-is-now.html), Google introduced support for LiveData with Data Binding.
-
+As you may know Google introduced support for LiveData with Data Binding in [Android Studio 3.1 Canary 6](https://androidstudio.googleblog.com/2017/12/android-studio-31-canary-6-is-now.html).
 
 ## Project Goal
 
@@ -16,10 +15,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.2'
     }
-}
-
-dependencies {
-  kapt 'com.android.databinding:compiler:3.1.2'  
 }
 
 ```

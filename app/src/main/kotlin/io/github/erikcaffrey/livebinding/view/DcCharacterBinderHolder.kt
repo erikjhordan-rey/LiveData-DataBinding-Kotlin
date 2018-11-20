@@ -1,6 +1,5 @@
 package io.github.erikcaffrey.livebinding.view
 
-
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import io.github.erikcaffrey.livedata_databinding.BR

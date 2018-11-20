@@ -13,24 +13,21 @@ import kotlinx.android.synthetic.main.activity_dc_character.recycler_dc_characte
 
 class DcCharacterActivity : AppCompatActivity() {
 
-    private lateinit var dcCharacterBinderAdapter: DcCharacterBinderAdapter
+    private val dcCharacterBinderAdapter: DcCharacterBinderAdapter by lazy { DcCharacterBinderAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val activityDcCharacterBinding: ActivityDcCharacterBinding? = DataBindingUtil.setContentView(this, R.layout.activity_dc_character)
-        initAdapter()
         initRecycler()
         initObserver(activityDcCharacterBinding)
     }
 
-    private fun initAdapter() {
-        dcCharacterBinderAdapter = DcCharacterBinderAdapter()
-    }
-
     private fun initRecycler() {
-        recycler_dc_character.layoutManager = GridLayoutManager(this, 2)
-        recycler_dc_character.setHasFixedSize(true)
-        recycler_dc_character.adapter = dcCharacterBinderAdapter
+        recycler_dc_character.run {
+            layoutManager = GridLayoutManager(context, 2)
+            setHasFixedSize(true)
+            adapter = dcCharacterBinderAdapter
+        }
     }
 
     private fun initObserver(activityDcCharacterBinding: ActivityDcCharacterBinding?) {
