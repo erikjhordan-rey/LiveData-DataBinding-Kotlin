@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="dcCharacterViewModel"
+            name="viewmodel"
             type="io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModel" />
     </data>
 
@@ -21,7 +20,7 @@
             android:background="@color/colorPrimary"
             android:gravity="start|center"
             android:padding="8dp"
-            android:text="@{` DC Characters: ` + Integer.toString(dcCharacterViewModel.dcCharacterList.size)}"
+            android:text="@{` DC Characters: ` + Integer.toString(viewmodel.dcCharacterList.size)}"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -35,6 +34,9 @@
             android:clipToPadding="false"
             android:scrollbars="vertical"
             app:layout_constraintTop_toBottomOf="@+id/text_character_size"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            android:characters="@{viewmodel.dcCharacterList}"
             tools:listitem="@layout/item_dc_character" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
