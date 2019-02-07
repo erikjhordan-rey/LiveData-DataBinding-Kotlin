@@ -8,7 +8,6 @@ import io.github.erikcaffrey.livebinding.model.DcCharacter
 import io.github.erikcaffrey.livedata_databinding.R
 
 class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>() {
-
     private var dcCharacterList: List<DcCharacter> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DcCharacterBinderHolder =
@@ -24,6 +23,6 @@ class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>()
 
     fun setDcCharacterList(dcCharacterList: List<DcCharacter>) {
         this.dcCharacterList = dcCharacterList
+        notifyDataSetChanged()
     }
-
 }
