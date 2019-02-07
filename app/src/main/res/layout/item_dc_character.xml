@@ -17,7 +17,10 @@
             android:layout_width="190dp"
             android:layout_height="200dp"
             android:scaleType="fitXY"
-            app:imageUrl="@{dcCharacter.imageProfile}" />
+            app:imageUrl="@{dcCharacter.imageProfile}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:contentDescription="@null" />
 
         <TextView
             android:layout_width="190dp"
@@ -28,7 +31,8 @@
             android:text="@{dcCharacter.name}"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@id/image_profile" />
+            app:layout_constraintTop_toBottomOf="@id/image_profile"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
