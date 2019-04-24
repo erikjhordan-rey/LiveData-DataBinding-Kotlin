@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
+import io.github.erikcaffrey.livebinding.view.images.MarginDecoration
 import io.github.erikcaffrey.livedata_databinding.R
 import io.github.erikcaffrey.livedata_databinding.databinding.ActivityDcCharacterBinding
 import io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModel
@@ -24,6 +25,7 @@ class DcCharacterActivity : AppCompatActivity() {
 
     private fun initRecycler() {
         recycler_dc_character.run {
+            addItemDecoration(MarginDecoration(context))
             layoutManager = GridLayoutManager(context, 2)
             setHasFixedSize(true)
             adapter = dcCharacterBinderAdapter
