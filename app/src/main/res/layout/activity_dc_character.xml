@@ -1,5 +1,4 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -9,9 +8,10 @@
             type="io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context="io.github.erikcaffrey.livebinding.view.DcCharacterActivity">
 
         <TextView
@@ -24,19 +24,14 @@
             android:text="@{` DC Characters: ` + Integer.toString(dcCharacterViewModel.dcCharacterList.size)}"
             android:textColor="@android:color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/recycler_dc_character"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_dc_character"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clipToPadding="false"
-            android:scrollbars="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/text_character_size"
+            android:layout_height="match_parent"
             tools:listitem="@layout/item_dc_character" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </layout>

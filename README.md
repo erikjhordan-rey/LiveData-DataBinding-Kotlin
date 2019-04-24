@@ -6,19 +6,6 @@ As you may know Google introduced support for LiveData with Data Binding in [And
 
 Learn to use LiveData + Databinding 
 
-## Setup Android Studio 3.1.2
-
-
-``` 
-
-buildscript {
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.2'
-    }
-}
-
-```
-
 ## LiveData + Data Binding
 
 

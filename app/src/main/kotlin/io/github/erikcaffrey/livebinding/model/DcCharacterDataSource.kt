@@ -17,55 +17,55 @@ class DcCharacterDataSource {
 
     private fun greenArrow() = DcCharacter(
             "Green Arrow",
-            "${IMAGE_URL}greenarrow_192x291_53c5882189d358.67363982.jpg"
+            "${IMAGE_URL}Char_Profile_GreenArrow_5c4915494b4039.94050514.jpg"
     )
 
     private fun greenLantern() = DcCharacter(
             "Green Lantern",
-            "${IMAGE_URL}greenlantern_192x291_53c58825e12104.69475958.jpg"
+            "${IMAGE_URL}Char_Profile_GreenLantern_20190116_5c3fc8c14ceda8.50076512.jpg"
     )
 
     private fun batman() = DcCharacter(
             "Batman",
-            "${IMAGE_URL}batman_192x291_53c586e749eca9.23086395.jpg"
+            "${IMAGE_URL}Char_Profile_Batman_20190116_5c3fc4b40faec2.47318964.jpg"
     )
 
     private fun aquaman() = DcCharacter(
             "Aquaman",
-            "${IMAGE_URL}aquaman_192x291_53c58690b878f2.24442607.jpg"
+            "${IMAGE_URL}Char_Profile_Aquaman_5c411a95e71072.35445903.jpg"
     )
 
     private fun flash() = DcCharacter(
             "Flash",
-            "${IMAGE_URL}flash_192x291_53c5884f9ef0f3.17717926.jpg"
+            "${IMAGE_URL}Char_Profile_Flash_20190116_5c3fcaaa18f0e8.03668117.jpg"
     )
 
     private fun captainBoomerang() = DcCharacter(
             "Captain Boomerang",
-            "${IMAGE_URL}ThumbChar_192x291_CaptainBoomerang_57a2917937dd87.92908661.jpg"
+            "${IMAGE_URL}Char_Profile_CaptainBoomerang_5c47c7697e4c81.97961521.jpg"
     )
 
     private fun superMan() = DcCharacter(
-            "Super Man",
-            "${IMAGE_URL}superman_192x291_53c5896880ca13.21900404.jpg"
+            "Bizarro",
+            "${IMAGE_URL}Char_Profile_Bizarro_5c4114e7bebcd5.79694855.jpg"
     )
 
     private fun harleyQuinn() = DcCharacter(
             "Harley Quinn",
-            "${IMAGE_URL}harleyquinn_192x291_53c5882a58b405.75607533.jpg"
+            "${IMAGE_URL}Char_Profile_HarleyQuinn_5c4a3e75812334.21707976.jpg"
     )
 
     private fun joker() = DcCharacter(
             "Joker",
-            "${IMAGE_URL}joker_192x291_53c58838088661.35975696.jpg"
+            "${IMAGE_URL}Char_Profile_Joker_5c4a42b7ef2091.76638294.jpg"
     )
 
     private fun captainCold() = DcCharacter(
             "Captain Cold",
-            "${IMAGE_URL}captaincold_192x291_53c5877b6d0b08.48501626.jpg"
+            "${IMAGE_URL}Char_Profile_CaptainCold_5c47c824a31862.57032666.jpg"
     )
 
     companion object {
-        private const val IMAGE_URL = "https://www.dccomics.com/sites/default/files/styles/comics320x485/public/"
+        private const val IMAGE_URL = "https://www.dccomics.com/sites/default/files/styles/character_thumb_160x160/public/"
     }
 }

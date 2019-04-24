@@ -12,7 +12,7 @@ class DcCharacterViewModel : ViewModel() {
     private val dcCharacterListMutableLive = MutableLiveData<List<DcCharacter>>()
 
     init {
-        dcCharacterRepository.receiverDcCharacterList { it -> dcCharacterListMutableLive.postValue(it) }
+        dcCharacterRepository.receiverDcCharacterList { dcCharacterListMutableLive.postValue(it) }
     }
 
     fun getDcCharacterList() = dcCharacterListMutableLive as LiveData<List<DcCharacter>>

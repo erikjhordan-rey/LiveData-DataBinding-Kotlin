@@ -40,7 +40,7 @@ class DcCharacterActivity : AppCompatActivity() {
 
         activityDcCharacterBinding?.run {
             this.dcCharacterViewModel = dcCharacterViewModel
-            setLifecycleOwner(this@DcCharacterActivity)
+            lifecycleOwner = this@DcCharacterActivity
         }
     }
 }

@@ -1,18 +1,32 @@
 buildscript {
-    ext.kotlin_version = '1.2.71'
-    ext.gradleVersion = '3.2.1'
+
+    ext.versions = [
+            'compileSdk'       : 28,
+            'minSdk'           : 15,
+            'targetSdk'        : 28,
+            'androidGradle'    : '3.4.0',
+            'androidx'         : '1.0.0',
+            'androidxAppcompat': '1.0.2',
+            'lifecycle'        : '2.0.0',
+            'glide'            : '4.9.0',
+            'kotlin'           : '1.3.21',
+            'ktlint'           : '0.29.0'
+    ]
+
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:$gradleVersion"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.android.tools.build:gradle:${versions.androidGradle}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
     }
 }
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
         jcenter()
     }
