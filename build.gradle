@@ -9,7 +9,7 @@ buildscript {
             'androidxAppcompat': '1.0.2',
             'lifecycle'        : '2.0.0',
             'glide'            : '4.9.0',
-            'kotlin'           : '1.3.21',
+            'kotlin'           : '1.3.30',
             'ktlint'           : '0.29.0'
     ]
 
