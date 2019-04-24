@@ -24,6 +24,7 @@ class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>()
 
     fun setDcCharacterList(dcCharacterList: List<DcCharacter>) {
         this.dcCharacterList = dcCharacterList
+        notifyDataSetChanged()
     }
 
 }

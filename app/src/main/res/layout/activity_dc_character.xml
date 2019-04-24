@@ -4,7 +4,7 @@
     <data>
 
         <variable
-            name="dcCharacterViewModel"
+            name="viewModel"
             type="io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModel" />
     </data>
 
@@ -21,7 +21,7 @@
             android:background="@color/colorPrimary"
             android:gravity="start|center"
             android:padding="8dp"
-            android:text="@{` DC Characters: ` + Integer.toString(dcCharacterViewModel.dcCharacterList.size)}"
+            android:text="@{` DC Characters: ` + Integer.toString(viewModel.dcCharacterList.size)}"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -31,6 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
+            android:characters="@{viewModel.dcCharacterList}"
             android:padding="@dimen/item_margin"
             tools:listitem="@layout/item_dc_character" />
 

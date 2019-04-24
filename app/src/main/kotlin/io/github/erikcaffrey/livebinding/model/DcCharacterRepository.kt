@@ -9,11 +9,6 @@ typealias DcCharacterCommand = (List<DcCharacter>) -> Unit
 
 class DcCharacterRepository constructor(private val dcCharacterDataSource: DcCharacterDataSource) {
 
-    companion object {
-        private const val PERIOD_SECONDS: Long = 2
-        private const val MIN_INDEX = 0
-    }
-
     private val timer = Timer()
     private val random = Random()
     private val period = TimeUnit.SECONDS.toMillis(PERIOD_SECONDS)
@@ -33,5 +28,10 @@ class DcCharacterRepository constructor(private val dcCharacterDataSource: DcCha
                 dcCommand.invoke(dcCharacterList.subList(MIN_INDEX, randomMax))
             }
         }, period, period)
+    }
+
+    companion object {
+        private const val PERIOD_SECONDS: Long = 2
+        private const val MIN_INDEX = 0
     }
 }
