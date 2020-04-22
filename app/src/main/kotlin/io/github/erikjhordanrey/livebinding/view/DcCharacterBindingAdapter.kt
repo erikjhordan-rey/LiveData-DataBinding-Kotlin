@@ -1,10 +1,10 @@
-package io.github.erikcaffrey.livebinding.view
+package io.github.erikjhordanrey.livebinding.view
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import io.github.erikcaffrey.livebinding.model.DcCharacter
+import io.github.erikjhordanrey.livebinding.model.DcCharacter
 
 @BindingAdapter("imageUrl")
 fun loadImage(imageView: ImageView, url: String) {

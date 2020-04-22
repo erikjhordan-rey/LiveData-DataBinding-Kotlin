@@ -1,3 +1,3 @@
-package io.github.erikcaffrey.livebinding.model
+package io.github.erikjhordanrey.livebinding.model
 
 data class DcCharacter(val name: String, val imageProfile: String)

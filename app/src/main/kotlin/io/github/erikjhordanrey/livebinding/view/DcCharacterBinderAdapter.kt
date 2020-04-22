@@ -1,11 +1,11 @@
-package io.github.erikcaffrey.livebinding.view
+package io.github.erikjhordanrey.livebinding.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import io.github.erikcaffrey.livebinding.model.DcCharacter
-import io.github.erikcaffrey.livedata_databinding.R
+import io.github.erikjhordanrey.livebinding.R
+import io.github.erikjhordanrey.livebinding.model.DcCharacter
 
 class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>() {
 
@@ -26,5 +26,4 @@ class DcCharacterBinderAdapter : RecyclerView.Adapter<DcCharacterBinderHolder>()
         this.dcCharacterList = dcCharacterList
         notifyDataSetChanged()
     }
-
 }

@@ -5,14 +5,14 @@
 
         <variable
             name="viewModel"
-            type="io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModel" />
+            type="io.github.erikjhordanrey.livebinding.viewmodel.DcCharacterViewModel" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="io.github.erikcaffrey.livebinding.view.DcCharacterActivity">
+        tools:context="io.github.erikjhordanrey.livebinding.view.DcCharacterActivity">
 
         <TextView
             android:id="@+id/text_character_size"

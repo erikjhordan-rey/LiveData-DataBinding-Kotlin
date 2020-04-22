@@ -1,10 +1,10 @@
-package io.github.erikcaffrey.livebinding.view.images
+package io.github.erikjhordanrey.livebinding.view.images
 
 import android.content.Context
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import io.github.erikcaffrey.livedata_databinding.R
+import io.github.erikjhordanrey.livebinding.R
 
 class MarginDecoration(context: Context) : RecyclerView.ItemDecoration() {
 

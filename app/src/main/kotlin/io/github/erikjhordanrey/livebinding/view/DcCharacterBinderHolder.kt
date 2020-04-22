@@ -1,9 +1,9 @@
-package io.github.erikcaffrey.livebinding.view
+package io.github.erikjhordanrey.livebinding.view
 
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
-import io.github.erikcaffrey.livedata_databinding.BR
-import io.github.erikcaffrey.livebinding.model.DcCharacter
+import io.github.erikjhordanrey.livebinding.BR
+import io.github.erikjhordanrey.livebinding.model.DcCharacter
 
 class DcCharacterBinderHolder constructor(private val viewDataBinding: ViewDataBinding) : RecyclerView.ViewHolder(viewDataBinding.root) {
 

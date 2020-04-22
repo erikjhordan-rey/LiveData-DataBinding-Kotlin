@@ -5,7 +5,7 @@
 
         <variable
             name="dcCharacter"
-            type="io.github.erikcaffrey.livebinding.model.DcCharacter" />
+            type="io.github.erikjhordanrey.livebinding.model.DcCharacter" />
     </data>
 
     <LinearLayout

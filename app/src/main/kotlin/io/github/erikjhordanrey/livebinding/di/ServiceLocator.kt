@@ -1,11 +1,11 @@
-package io.github.erikcaffrey.livebinding.di
+package io.github.erikjhordanrey.livebinding.di
 
 import androidx.lifecycle.ViewModelProvider
-import io.github.erikcaffrey.livebinding.model.DcCharacterDataSource
-import io.github.erikcaffrey.livebinding.model.DcCharacterRepository
-import io.github.erikcaffrey.livebinding.view.DcCharacterActivity
-import io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModel
-import io.github.erikcaffrey.livebinding.viewmodel.DcCharacterViewModelFactory
+import io.github.erikjhordanrey.livebinding.model.DcCharacterDataSource
+import io.github.erikjhordanrey.livebinding.model.DcCharacterRepository
+import io.github.erikjhordanrey.livebinding.view.DcCharacterActivity
+import io.github.erikjhordanrey.livebinding.viewmodel.DcCharacterViewModel
+import io.github.erikjhordanrey.livebinding.viewmodel.DcCharacterViewModelFactory
 
 object ServiceLocator {
 

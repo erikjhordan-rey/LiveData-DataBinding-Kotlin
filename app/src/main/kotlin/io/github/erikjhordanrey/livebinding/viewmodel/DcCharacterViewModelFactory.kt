@@ -1,9 +1,10 @@
-package io.github.erikcaffrey.livebinding.viewmodel
+package io.github.erikjhordanrey.livebinding.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import io.github.erikcaffrey.livebinding.model.DcCharacterRepository
+import io.github.erikjhordanrey.livebinding.model.DcCharacterRepository
 
+@Suppress("UNCHECKED_CAST")
 class DcCharacterViewModelFactory(private val dcCharacterRepository: DcCharacterRepository) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

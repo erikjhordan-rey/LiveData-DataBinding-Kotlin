@@ -1,4 +1,4 @@
-package io.github.erikcaffrey.livebinding.model
+package io.github.erikjhordanrey.livebinding.model
 
 class DcCharacterDataSource {
 
