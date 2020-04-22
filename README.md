@@ -36,7 +36,7 @@ easily fix it by running: `./gradlew ktlintFormat`, or running IntelliJ/Android 
 Developed By
 ------------
 
-* Erik Jhordan Rey  - <erikjhordan.rey@gmail.com> o <erik.gonzalez@schibsted.com>
+* Erik Jhordan Rey  - <erikjhordan.rey@gmail.com>
 
 License
 -------
