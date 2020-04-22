@@ -3,12 +3,11 @@ package io.github.erikcaffrey.livebinding.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import io.github.erikcaffrey.livebinding.di.ServiceLocator
 import io.github.erikcaffrey.livebinding.model.DcCharacter
+import io.github.erikcaffrey.livebinding.model.DcCharacterRepository
 
-class DcCharacterViewModel : ViewModel() {
+class DcCharacterViewModel(dcCharacterRepository: DcCharacterRepository) : ViewModel() {
 
-    private val dcCharacterRepository = ServiceLocator.dcCharacterRepository
     private val dcCharacterListMutableLive = MutableLiveData<List<DcCharacter>>()
 
     init {
