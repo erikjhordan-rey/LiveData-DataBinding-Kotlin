@@ -10,15 +10,15 @@ configurations {
 android {
     compileSdkVersion versions.compileSdk
     defaultConfig {
-        applicationId "io.github.erikcaffrey.livedata_databinding"
+        applicationId "io.github.erikjhordanrey.livedata_databinding"
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
         versionCode 1
         versionName "1.0"
     }
 
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding = true
     }
 
     buildTypes {
